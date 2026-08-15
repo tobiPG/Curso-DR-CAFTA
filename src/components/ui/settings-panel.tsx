@@ -9,13 +9,11 @@ import {
   Settings,
   HelpCircle,
   Check,
-  ImageIcon,
   ChevronDown,
   Users,
   Bell,
   Globe,
   Zap,
-  Star,
   Download,
   RefreshCw,
   Mail,
@@ -292,7 +290,7 @@ function UpgradeSection() {
 }
 
 /* ─── Projects section ─── */
-function ProjectsSection({ onPlayModule }: { onPlayModule?: () => void }) {
+function ProjectsSection() {
   const { getProgress } = useProgress()
 
   return (
