@@ -26,7 +26,7 @@ const PRESET_PROFILES: Profile[] = [
 type Screen = "loading" | "landing" | "login" | "setup" | "ready"
 
 function CourseApp() {
-  const { user, profile, loading, isNewUser, signOut, updateProfile } = useAuth()
+  const { user, profile, loading, signOut, updateProfile } = useAuth()
 
   const [screen, setScreen] = useState<Screen>("loading")
   const [pendingModule, setPendingModule] = useState<CourseModule | null>(null)
