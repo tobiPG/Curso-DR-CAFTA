@@ -14,7 +14,9 @@ export interface ModuleProgressRow {
   updated_at: string
 }
 
-const url = import.meta.env.VITE_SUPABASE_URL as string
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string
+// Valores de respaldo para que la app no se rompa si faltan las variables
+// de entorno (el login está desactivado por ahora).
+const url = (import.meta.env.VITE_SUPABASE_URL as string) || "https://placeholder.supabase.co"
+const key = (import.meta.env.VITE_SUPABASE_ANON_KEY as string) || "placeholder-anon-key"
 
 export const supabase = createClient(url, key)
